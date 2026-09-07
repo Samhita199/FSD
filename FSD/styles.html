@@ -1,0 +1,1076 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dance Styles | Samhita's Indian Traditional Dance Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #eee1cd;
+    color: #35152d;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 78px;
+    background: #35152d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    z-index: 1000;
+    border-bottom: 1px solid #b08a45;
+    box-shadow: 0 5px 25px rgba(40, 20, 25, 0.25);
+}
+
+.logo {
+    color: #dfb95f;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #f7ead8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #dfb95f;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 72vh;
+    margin-top: 78px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(53, 21, 45, 0.65),
+            rgba(53, 21, 45, 0.72)
+        ),
+        url("image11.jpeg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 40px 25px;
+    color: #fff8ed;
+}
+
+.hero-content span {
+    color: #dfb95f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: 0.95;
+    margin: 18px 0 20px;
+}
+
+.gold-line {
+    width: 90px;
+    height: 2px;
+    margin: 25px auto;
+    background: #d7ae58;
+}
+
+.hero-content p {
+    max-width: 680px;
+    margin: auto;
+    color: #f3e4d1;
+    font-size: 16px;
+}
+
+/* COMMON SECTION */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.section-heading span {
+    color: #a77a2c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: #35152d;
+    font-size: 58px;
+    line-height: 1;
+    margin: 12px 0 18px;
+}
+
+.section-heading p {
+    color: #68555b;
+    font-size: 14px;
+}
+
+/* DANCE STYLES */
+
+.styles-section {
+    background: #eee1cd;
+}
+
+.styles-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.style-card {
+    background: #f8efdf;
+    border: 1px solid rgba(176, 138, 69, 0.45);
+    box-shadow: 0 15px 35px rgba(70, 40, 30, 0.13);
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.style-card:hover {
+    transform: translateY(-8px);
+    border-color: #c49a4d;
+    box-shadow: 0 22px 45px rgba(70, 40, 30, 0.20);
+}
+
+.style-image {
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+}
+
+.style-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.style-card:hover .style-image img {
+    transform: scale(1.05);
+}
+
+.style-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(53, 21, 45, 0.92);
+    border: 1px solid #d7ae58;
+    color: #dfb95f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.style-content {
+    padding: 30px 32px 35px;
+}
+
+.style-content h3 {
+    font-size: 37px;
+    color: #35152d;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #a77a2c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.style-content p {
+    color: #66545a;
+    font-size: 14px;
+}
+
+/* ART ELEMENTS */
+
+.art-section {
+    background: #35152d;
+    color: #f8efdf;
+}
+
+.art-section .section-heading h2 {
+    color: #f8efdf;
+}
+
+.art-section .section-heading span {
+    color: #dfb95f;
+}
+
+.art-section .section-heading p {
+    color: #d9c9bb;
+}
+
+.art-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.art-card {
+    padding: 38px 24px;
+    text-align: center;
+    border: 1px solid rgba(215, 174, 88, 0.38);
+    background: rgba(255,255,255,0.025);
+    transition: 0.3s;
+}
+
+.art-card:hover {
+    transform: translateY(-6px);
+    border-color: #d7ae58;
+}
+
+.art-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    border: 1px solid #d7ae58;
+    border-radius: 50%;
+    color: #dfb95f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+}
+
+.art-card h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.art-card p {
+    color: #d9c9bb;
+    font-size: 13px;
+}
+
+/* IMAGE GALLERY */
+
+.gallery-section {
+    background: #f3e6d4;
+}
+
+.gallery-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 25px;
+}
+
+.gallery-main {
+    height: 600px;
+    overflow: hidden;
+    border: 7px solid #faf2e4;
+    box-shadow: 0 15px 35px rgba(70, 40, 30, 0.17);
+}
+
+.gallery-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.gallery-small {
+    height: 287px;
+    overflow: hidden;
+    border: 7px solid #faf2e4;
+    box-shadow: 0 15px 35px rgba(70, 40, 30, 0.17);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.gallery-grid div:hover img {
+    transform: scale(1.05);
+}
+
+/* EXTRA IMAGES */
+
+.mini-gallery {
+    max-width: 1250px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.mini-image {
+    height: 300px;
+    overflow: hidden;
+    border: 6px solid #faf2e4;
+    box-shadow: 0 12px 30px rgba(70, 40, 30, 0.15);
+}
+
+.mini-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.mini-image:hover img {
+    transform: scale(1.06);
+}
+
+/* CTA */
+
+.cta {
+    min-height: 450px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(53,21,45,0.76),
+            rgba(53,21,45,0.80)
+        ),
+        url("image12.jpeg") center/cover no-repeat;
+}
+
+.cta-content {
+    max-width: 800px;
+    color: white;
+}
+
+.cta-content span {
+    color: #dfb95f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.cta-content h2 {
+    font-size: 62px;
+    line-height: 1;
+    margin: 15px 0 20px;
+}
+
+.cta-content p {
+    color: #f0e1cf;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #d7ae58;
+    color: #dfb95f;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #d7ae58;
+    color: #35152d;
+}
+
+/* FOOTER */
+
+footer {
+    background: #24101f;
+    color: #cdbfb3;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(215,174,88,0.3);
+}
+
+footer h3 {
+    color: #dfb95f;
+    font-size: 29px;
+    margin-bottom: 7px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .styles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-main {
+        height: 450px;
+    }
+
+    .gallery-small {
+        height: 300px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 95px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 4%;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        margin-top: 95px;
+        min-height: 65vh;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 44px;
+    }
+
+    .style-image {
+        height: 300px;
+    }
+
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-main {
+        height: 360px;
+    }
+
+    .gallery-side {
+        grid-template-rows: none;
+    }
+
+    .gallery-small {
+        height: 260px;
+    }
+
+    .mini-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-image {
+        height: 300px;
+    }
+
+    .cta-content h2 {
+        font-size: 46px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        Samhita's Dance Academy
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index2.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="styles.html" class="active">Dance Styles</a>
+        </li>
+
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+
+        <li>
+            <a href="lessons.html">Lessons</a>
+        </li>
+
+        <li>
+            <a href="join.html">Join Us</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span>Our Classical Heritage</span>
+
+        <h1>Dance Styles</h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+            Discover the elegance, rhythm and expressive beauty
+            of India's traditional dance forms.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DANCE STYLES -->
+
+<section class="section styles-section">
+
+    <div class="section-heading">
+
+        <span>Explore Our Styles</span>
+
+        <h2>Expressions of Tradition</h2>
+
+        <p>
+            Every Indian dance form has its own language of movement,
+            rhythm, expression and storytelling.
+        </p>
+
+    </div>
+
+
+    <div class="styles-grid">
+
+
+        <!-- 01 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image13.jpeg" alt="Bharatanatyam">
+
+                <div class="style-number">
+                    01
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Bharatanatyam</h3>
+
+                <div class="subtitle">
+                    Rhythm • Expression • Grace
+                </div>
+
+                <p>
+                    A celebrated classical dance form known for precise
+                    footwork, expressive gestures, graceful poses and
+                    powerful storytelling.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image14.jpeg" alt="Kathak">
+
+                <div class="style-number">
+                    02
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Kathak</h3>
+
+                <div class="subtitle">
+                    Movement • Drama • Expression
+                </div>
+
+                <p>
+                    A graceful dance tradition combining rhythmic movement,
+                    expressive storytelling and elements of classical theatre.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image15.jpeg" alt="Kuchipudi">
+
+                <div class="style-number">
+                    03
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Kuchipudi</h3>
+
+                <div class="subtitle">
+                    Rhythm • Spins • Storytelling
+                </div>
+
+                <p>
+                    Recognised for intricate footwork, graceful turns,
+                    rhythmic patterns and expressive storytelling.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image16.jpeg" alt="Odissi">
+
+                <div class="style-number">
+                    04
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Odissi</h3>
+
+                <div class="subtitle">
+                    Sculptural • Graceful • Expressive
+                </div>
+
+                <p>
+                    A graceful classical form distinguished by fluid
+                    movements, sculptural poses and expressive interpretation.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image17.jpeg" alt="Mohiniyattam">
+
+                <div class="style-number">
+                    05
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Mohiniyattam</h3>
+
+                <div class="subtitle">
+                    Softness • Beauty • Expression
+                </div>
+
+                <p>
+                    Known for gentle swaying movements, graceful expressions
+                    and an elegant style of presentation.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 06 -->
+
+        <article class="style-card">
+
+            <div class="style-image">
+
+                <img src="image18.jpeg" alt="Manipuri">
+
+                <div class="style-number">
+                    06
+                </div>
+
+            </div>
+
+            <div class="style-content">
+
+                <h3>Manipuri</h3>
+
+                <div class="subtitle">
+                    Devotion • Fluidity • Grace
+                </div>
+
+                <p>
+                    A delicate dance tradition featuring smooth movements,
+                    devotional themes and refined expressions.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ART ELEMENTS -->
+
+<section class="section art-section">
+
+    <div class="section-heading">
+
+        <span>The Art Behind Every Movement</span>
+
+        <h2>More Than Movement</h2>
+
+        <p>
+            Traditional dance brings together several artistic elements
+            to create a complete performance.
+        </p>
+
+    </div>
+
+
+    <div class="art-grid">
+
+
+        <div class="art-card">
+
+            <div class="art-icon">
+                ✦
+            </div>
+
+            <h3>Abhinaya</h3>
+
+            <p>
+                Expressing emotions and stories through facial
+                expressions and gestures.
+            </p>
+
+        </div>
+
+
+        <div class="art-card">
+
+            <div class="art-icon">
+                ◈
+            </div>
+
+            <h3>Tala</h3>
+
+            <p>
+                Understanding rhythm and maintaining precision
+                throughout the performance.
+            </p>
+
+        </div>
+
+
+        <div class="art-card">
+
+            <div class="art-icon">
+                ✧
+            </div>
+
+            <h3>Mudras</h3>
+
+            <p>
+                Using meaningful hand gestures to communicate
+                ideas and emotions.
+            </p>
+
+        </div>
+
+
+        <div class="art-card">
+
+            <div class="art-icon">
+                ❖
+            </div>
+
+            <h3>Expression</h3>
+
+            <p>
+                Connecting movement, emotion and storytelling
+                into one graceful presentation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section gallery-section">
+
+    <div class="section-heading">
+
+        <span>Visual Journey</span>
+
+        <h2>Moments in Motion</h2>
+
+        <p>
+            A glimpse into the elegance and beauty of
+            Indian traditional dance.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-main">
+
+            <img src="image19.jpeg"
+                 alt="Indian traditional dance performance">
+
+        </div>
+
+
+        <div class="gallery-side">
+
+            <div class="gallery-small">
+
+                <img src="image20.jpeg"
+                     alt="Traditional Indian dance">
+
+            </div>
+
+
+            <div class="gallery-small">
+
+                <img src="image21.jpeg"
+                     alt="Indian classical dancer">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXTRA IMAGES -->
+
+    <div class="mini-gallery">
+
+        <div class="mini-image">
+
+            <img src="image2.jpeg"
+                 alt="Traditional dance performance">
+
+        </div>
+
+
+        <div class="mini-image">
+
+            <img src="image3.jpeg"
+                 alt="Classical dance">
+
+        </div>
+
+
+        <div class="mini-image">
+
+            <img src="image4.jpeg"
+                 alt="Indian dance pose">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <span>BEGIN YOUR JOURNEY</span>
+
+        <h2>Find Your Rhythm</h2>
+
+        <p>
+            Step into the world of Indian traditional dance
+            and discover the joy of rhythm, expression and grace.
+        </p>
+
+        <a href="join.html" class="cta-button">
+            JOIN OUR ACADEMY
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Samhita's Indian Traditional Dance Academy
+    </h3>
+
+    <p>
+        Preserving tradition through rhythm, expression and grace.
+    </p>
+
+</footer>
+
+</body>
+</html>
+```

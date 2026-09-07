@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lessons | Samhita's Indian Traditional Dance Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#eee1cd;
+    color:#32152d;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(48,20,42,0.97);
+    border-bottom:1px solid #b08a45;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    font-weight:700;
+    color:#f3d18a;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#f4ead8;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#d6ad62;
+}
+
+/* HERO */
+
+.hero{
+    height:78vh;
+    min-height:560px;
+    margin-top:70px;
+    position:relative;
+    background:
+        linear-gradient(rgba(43,17,38,0.55),rgba(43,17,38,0.72)),
+        url("hero.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:30px;
+    color:#fff5e5;
+}
+
+.hero-content span{
+    display:block;
+    color:#e0bd76;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:76px;
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.hero-content p{
+    font-size:16px;
+    max-width:650px;
+    margin:auto;
+    color:#f5e9d7;
+}
+
+/* GENERAL */
+
+.section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:#ae8441;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    color:#35162f;
+    margin-top:8px;
+}
+
+.gold-line{
+    width:80px;
+    height:2px;
+    background:#b08a45;
+    margin:18px auto;
+}
+
+/* INTRO */
+
+.intro{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:16px;
+    color:#604b55;
+}
+
+/* LESSON CARDS */
+
+.lesson-grid{
+    margin-top:65px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.lesson-card{
+    background:#f7eddd;
+    border:1px solid #c6a66b;
+    box-shadow:0 15px 35px rgba(54,24,45,0.10);
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.lesson-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(54,24,45,0.18);
+}
+
+.lesson-image{
+    height:280px;
+    overflow:hidden;
+}
+
+.lesson-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.lesson-card:hover img{
+    transform:scale(1.06);
+}
+
+.lesson-content{
+    padding:28px;
+}
+
+.lesson-content h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+    color:#3a1733;
+    margin-bottom:10px;
+}
+
+.lesson-content p{
+    font-size:14px;
+    color:#66525c;
+}
+
+.lesson-number{
+    color:#b08a45;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:5px;
+}
+
+/* LEARNING JOURNEY */
+
+.journey{
+    background:#35162f;
+    color:#f8eddb;
+    padding:110px 7%;
+}
+
+.journey .section-title h2{
+    color:#f8eddb;
+}
+
+.journey .section-title span{
+    color:#d6ad62;
+}
+
+.journey-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:60px;
+}
+
+.journey-box{
+    text-align:center;
+    padding:35px 25px;
+    border:1px solid rgba(210,174,103,0.55);
+    background:rgba(255,255,255,0.03);
+}
+
+.journey-box .number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    color:#d8b66f;
+    margin-bottom:10px;
+}
+
+.journey-box h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.journey-box p{
+    font-size:13px;
+    color:#dfd1c1;
+}
+
+/* CLASS TYPES */
+
+.class-section{
+    background:#e5d5bd;
+}
+
+.class-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.class-image{
+    height:500px;
+    overflow:hidden;
+    border:1px solid #b08a45;
+    padding:8px;
+    background:#f4e8d4;
+}
+
+.class-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.class-content{
+    padding:20px;
+}
+
+.class-content span{
+    color:#aa7e3e;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+}
+
+.class-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    line-height:1.1;
+    margin:15px 0 20px;
+    color:#35162f;
+}
+
+.class-content p{
+    color:#5e4b54;
+    margin-bottom:18px;
+}
+
+.class-list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.class-list li{
+    padding:10px 0;
+    border-bottom:1px solid rgba(176,138,69,0.35);
+    font-size:14px;
+}
+
+.class-list li::before{
+    content:"✦";
+    color:#b08a45;
+    margin-right:12px;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:100px 7%;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:20px;
+}
+
+.gallery-item{
+    height:300px;
+    overflow:hidden;
+    border:1px solid #b08a45;
+}
+
+.gallery-item.large{
+    height:620px;
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+/* CTA */
+
+.cta{
+    min-height:430px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+        linear-gradient(rgba(48,19,43,0.76),rgba(48,19,43,0.82)),
+        url("image5.jpeg") center/cover no-repeat;
+}
+
+.cta-content{
+    max-width:700px;
+    padding:30px;
+    color:#fff4e2;
+}
+
+.cta-content span{
+    color:#e1bd75;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+}
+
+.cta-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    line-height:1.1;
+    margin:15px 0;
+}
+
+.cta-content p{
+    margin-bottom:28px;
+    color:#e7d9c9;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 30px;
+    border:1px solid #d2ad61;
+    color:#f5e6cc;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#d2ad61;
+    color:#35162f;
+}
+
+/* FOOTER */
+
+footer{
+    background:#251020;
+    color:#d9c9b9;
+    padding:55px 7% 25px;
+    text-align:center;
+    border-top:1px solid #a98243;
+}
+
+.footer-logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:35px;
+    color:#dfbb72;
+    margin-bottom:10px;
+}
+
+footer p{
+    font-size:13px;
+}
+
+.footer-line{
+    width:70px;
+    height:1px;
+    background:#b08a45;
+    margin:20px auto;
+}
+
+.copyright{
+    font-size:11px;
+    color:#a99a8c;
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .hero-content h1{
+        font-size:58px;
+    }
+
+    .lesson-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .journey-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .class-grid{
+        grid-template-columns:1fr;
+    }
+
+    .class-image{
+        height:400px;
+    }
+
+}
+
+@media(max-width:650px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-links a{
+        font-size:9px;
+    }
+
+    .hero{
+        min-height:500px;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .section{
+        padding:75px 6%;
+    }
+
+    .section-title h2{
+        font-size:42px;
+    }
+
+    .lesson-grid{
+        grid-template-columns:1fr;
+    }
+
+    .journey-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item,
+    .gallery-item.large{
+        height:280px;
+        grid-row:auto;
+    }
+
+    .class-content h2{
+        font-size:42px;
+    }
+
+    .cta-content h2{
+        font-size:42px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Samhita's Academy
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index2.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="styles.html">Dance Styles</a>
+        </li>
+
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+
+        <li>
+            <a href="lessons.html" class="active">Lessons</a>
+        </li>
+
+        <li>
+            <a href="join.html">Join Us</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span>Learn • Practice • Perform</span>
+
+        <h1>Lessons That Shape the Dancer</h1>
+
+        <p>
+            Discover the beauty of Indian classical dance through structured
+            lessons, traditional techniques and graceful movement.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <span>Our Lessons</span>
+
+        <h2>A Journey of Grace</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+    <p class="intro">
+        Our lessons are designed to introduce students to the foundations
+        of Indian traditional dance while gradually developing rhythm,
+        expression, posture and confidence.
+    </p>
+
+
+    <div class="lesson-grid">
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image3.jpeg" alt="Dance fundamentals">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">01 — FOUNDATION</div>
+
+                <h3>Dance Fundamentals</h3>
+
+                <p>
+                    Learn basic postures, hand gestures, footwork,
+                    body movements and rhythm patterns.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image21.jpeg" alt="Classical dance training">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">02 — TECHNIQUE</div>
+
+                <h3>Classical Technique</h3>
+
+                <p>
+                    Develop precision and control through traditional
+                    dance movements and structured practice.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image7.jpeg" alt="Abhinaya dance expression">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">03 — EXPRESSION</div>
+
+                <h3>Abhinaya</h3>
+
+                <p>
+                    Explore facial expressions, storytelling and
+                    emotional expression through dance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image9.jpeg" alt="Rhythm and movement">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">04 — RHYTHM</div>
+
+                <h3>Tala & Rhythm</h3>
+
+                <p>
+                    Understand rhythm patterns and coordinate
+                    movement with traditional musical structures.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image12.jpeg" alt="Traditional dance practice">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">05 — PRACTICE</div>
+
+                <h3>Regular Practice</h3>
+
+                <p>
+                    Build consistency and confidence through guided
+                    practice and repeated movement exercises.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-card">
+
+            <div class="lesson-image">
+                <img src="image14.jpeg" alt="Dance performance preparation">
+            </div>
+
+            <div class="lesson-content">
+
+                <div class="lesson-number">06 — PERFORMANCE</div>
+
+                <h3>Performance Training</h3>
+
+                <p>
+                    Prepare for stage performances by developing
+                    presentation, confidence and expressive movement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEARNING JOURNEY -->
+
+<section class="journey">
+
+    <div class="section-title">
+
+        <span>Learning Journey</span>
+
+        <h2>From First Step to Stage</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="journey-grid">
+
+        <div class="journey-box">
+
+            <div class="number">01</div>
+
+            <h3>Learn</h3>
+
+            <p>
+                Understand the foundations and traditions of the dance form.
+            </p>
+
+        </div>
+
+
+        <div class="journey-box">
+
+            <div class="number">02</div>
+
+            <h3>Practice</h3>
+
+            <p>
+                Repeat movements to develop strength, balance and precision.
+            </p>
+
+        </div>
+
+
+        <div class="journey-box">
+
+            <div class="number">03</div>
+
+            <h3>Express</h3>
+
+            <p>
+                Bring emotion and storytelling into every movement.
+            </p>
+
+        </div>
+
+
+        <div class="journey-box">
+
+            <div class="number">04</div>
+
+            <h3>Perform</h3>
+
+            <p>
+                Present your learning with confidence on the stage.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CLASS TYPES -->
+
+<section class="section class-section">
+
+    <div class="section-title">
+
+        <span>Training Structure</span>
+
+        <h2>Designed for Every Stage</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="class-grid">
+
+        <div class="class-image">
+
+            <img src="image20.jpeg" alt="Traditional Indian dance lesson">
+
+        </div>
+
+
+        <div class="class-content">
+
+            <span>Our Approach</span>
+
+            <h2>Learn With Patience, Practice With Purpose</h2>
+
+            <p>
+                Every student follows a structured learning journey.
+                Lessons focus on technique, rhythm and expression while
+                respecting the traditional roots of Indian dance.
+            </p>
+
+            <p>
+                Students are guided step by step so that each movement
+                becomes natural, confident and graceful.
+            </p>
+
+            <ul class="class-list">
+
+                <li>Beginner-friendly foundation training</li>
+
+                <li>Traditional movement techniques</li>
+
+                <li>Rhythm and coordination practice</li>
+
+                <li>Expression and storytelling</li>
+
+                <li>Performance preparation</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+    <div class="section-title">
+
+        <span>Inside the Classroom</span>
+
+        <h2>Moments of Learning</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img src="image18.jpeg" alt="Indian traditional dance">
+        </div>
+
+        <div class="gallery-item">
+            <img src="image20.jpeg" alt="Dance practice">
+        </div>
+
+        <div class="gallery-item">
+            <img src="image3.jpeg" alt="Classical dance lesson">
+        </div>
+
+        <div class="gallery-item">
+            <img src="image8.jpeg" alt="Dance training">
+        </div>
+
+        <div class="gallery-item">
+            <img src="image11.jpeg" alt="Dance performance practice">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <span>Begin Your Journey</span>
+
+        <h2>Let Your Dance Story Begin</h2>
+
+        <p>
+            Step into the world of Indian traditional dance and discover
+            the discipline, beauty and expression within every movement.
+        </p>
+
+        <a href="join.html" class="btn">
+            Join Our Academy
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        Samhita's Indian Traditional Dance Academy
+    </div>
+
+    <p>
+        Preserving tradition. Inspiring expression. Creating graceful journeys.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        © 2026 Samhita's Indian Traditional Dance Academy. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
